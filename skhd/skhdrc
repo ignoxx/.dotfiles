@@ -1,0 +1,40 @@
+# Navigation
+ctrl + alt - h : yabai -m window --focus west
+ctrl + alt - l : yabai -m window --focus east
+ctrl + alt - j : yabai -m window --focus south
+ctrl + alt - k : yabai -m window --focus north
+
+# Moving windows
+# ctrl + shift - h : yabai -m window --warp west
+# ctrl + shift - l : yabai -m window --warp east
+# ctrl + shift - j : yabai -m window --warp south
+# ctrl + shift - k : yabai -m window --warp north
+
+# Balance the layout
+ctrl + alt - b : yabai -m space --balance
+
+# Float / Unfloat window
+ctrl + alt - f : yabai -m window --toggle float
+
+ctrl - f : yabai -m window --toggle zoom-fullscreen
+
+# Change desktop
+ctrl - 1 : yabai -m space --focus 1
+ctrl - 2 : yabai -m space --focus 2
+ctrl - 3 : yabai -m space --focus 3
+ctrl - 4 : yabai -m space --focus 4
+ctrl - 5 : yabai -m space --focus 5
+ctrl - 6 : yabai -m space --focus 6
+ctrl - 7 : yabai -m space --focus 7
+ctrl - 8 : yabai -m space --focus 8
+ctrl - 9 : yabai -m space --focus 9
+# ctrl - 0 : yabai -m space --focus 10
+
+# open terminal, blazingly fast compared to iTerm/Hyper
+cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty #--single-instance -d ~
+
+# open qutebrowser
+# cmd + shift - return : ~/Scripts/qtb.sh
+
+# open mpv
+# cmd - m : open -na /Applications/mpv.app $(pbpaste)
