@@ -4,7 +4,9 @@
 My config files managed with `stow`
 
 # requirements
-- stow
+```sh
+brew install stow gh
+```
 
 # setup
 
