@@ -1,9 +1,19 @@
 #!/usr/bin/env bash
 
+search_dirs=(~ ~/Projects ~/.config)
+
+find_directories() {
+    find "${search_dirs[@]}" -mindepth 1 -maxdepth 1 -type d
+}
+
+find_symlinked_directories() {
+    find "${search_dirs[@]}" -mindepth 1 -maxdepth 1 -type l -exec test -d {} \; -print
+}
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~ ~/Projects ~/.config -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$((find_directories; find_symlinked_directories) | fzf)
 fi
 
 if [[ -z $selected ]]; then
