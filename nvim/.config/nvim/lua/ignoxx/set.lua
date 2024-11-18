@@ -26,9 +26,8 @@ vim.opt.undofile = true
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', 'C-c', '<cmd>nohlsearch<CR>')
-
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "C-c", "<cmd>nohlsearch<CR>")
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -46,3 +45,7 @@ vim.g.mapleader = " "
 -- let g:omni_sql_no_default_maps = 1
 -- it was annoying in sql files
 vim.g.omni_sql_no_default_maps = 1
+
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
