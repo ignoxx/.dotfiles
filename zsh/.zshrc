@@ -17,6 +17,7 @@ then
 fi
 
 source $ZSH/oh-my-zsh.sh
+source <(fzf --zsh)
 
 export VISUAL=nvim
 export EDITOR=nvim
