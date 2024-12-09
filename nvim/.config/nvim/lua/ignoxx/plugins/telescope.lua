@@ -13,15 +13,16 @@ return {
 			local builtin = require("telescope.builtin")
 
 			telescope.setup({
-				defaults = {
-					layout_strategy = "vertical",
-					layout_config = {
-						vertical = {
-							prompt_position = "bottom",
-							mirror = false,
-						},
-					},
-				},
+				-- defaults = {
+				-- 	layout_strategy = "vertical",
+				-- 	layout_config = {
+				-- 		vertical = {
+				-- 			prompt_position = "bottom",
+				-- 			mirror = false,
+				-- 		},
+				-- 	},
+				-- },
+				defaults = require("telescope.themes").get_ivy(),
 				extensions = {
 					auto_quoting = true,
 				},
