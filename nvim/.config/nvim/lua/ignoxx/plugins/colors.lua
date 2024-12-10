@@ -9,6 +9,7 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", fg = "none" })
 
 	vim.api.nvim_set_hl(0, "OilFile", { bg = "none", fg = "#7a7a8c" })
+	vim.api.nvim_set_hl(0, "OilDirHidden", { link = "OilDir" })
 
 	-- cursor hover hightlight same word
 	vim.api.nvim_set_hl(0, "LocalHighlight", { bg = "#3c3c47" })
