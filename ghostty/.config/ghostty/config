@@ -12,7 +12,6 @@ macos-icon-screen-color = 181825
 cursor-style                   = block
 cursor-style-blink             = false
 
-term = ghostty
 confirm-close-surface = false
 
 # disable all ligs
@@ -24,5 +23,5 @@ font-size = 20
 font-family = "Hack Nerd Font"
 # font-family = "Hack Nerd Font Mono Regular"
 # font-family-bold = "Hack Nerd Font Mono Bold"
-# font-family-italic = "Hack Nerd Font Mono Italic" 
+# font-family-italic = "Hack Nerd Font Mono Italic"
 # font-family-bold-italic = "Hack Nerd Font Mono Bold Italic"
