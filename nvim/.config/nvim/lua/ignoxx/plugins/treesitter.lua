@@ -17,7 +17,6 @@ return {
 				"javascript",
 				"typescript",
 				"go",
-				"templ",
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
