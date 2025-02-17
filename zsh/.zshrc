@@ -38,6 +38,7 @@ fi
 
 export VISUAL=nvim
 export EDITOR=nvim
+export TERM=xterm-ghostty
 
 # bins
 GOBIN=$HOME/go/bin/

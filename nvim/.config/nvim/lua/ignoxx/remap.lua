@@ -1,4 +1,6 @@
 vim.keymap.set("n", "<leader>e", vim.cmd.Oil)
+-- open netrw instead
+vim.keymap.set("n", "<leader>o", vim.cmd.Ex)
 
 -- move selected lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

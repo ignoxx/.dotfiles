@@ -29,6 +29,7 @@ return {
 			})
 
 			vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
+			vim.keymap.set("n", "<C-f>", builtin.find_files, {})
 			vim.keymap.set("n", "<C-p>", function()
 				local success = pcall(builtin.git_files, {})
 				if not success then
