@@ -11,6 +11,7 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt autocd
 unsetopt hist_verify
 
 # unsetopt menucomplete
@@ -85,7 +86,6 @@ bindkey '^[[B' history-search-forward
 # Use the same keys as bash for history forward/backward: Ctrl+N/Ctrl+P
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
-
 
 if [ -f "$HOME/.env" ]; then
     source "$HOME/.env"

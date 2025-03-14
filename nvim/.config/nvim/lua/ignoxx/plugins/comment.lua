@@ -4,6 +4,8 @@ return {
 		opts = {
 			hlgroup = "LocalHighlight",
 			cw_hlgroup = nil,
+			animate = { enabled = false },
+			debounce_timeout = 0,
 		},
 	},
 	{

@@ -8,6 +8,10 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", fg = "none" })
 	vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", fg = "none" })
 
+	vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#0F0F10", bg = "none" })
+	vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#171718", bg = "none" })
+	vim.api.nvim_set_hl(0, "SnacksIndentChunk", { fg = "#171718", bg = "none" })
+
 	vim.api.nvim_set_hl(0, "OilFile", { bg = "none", fg = "#7a7a8c" })
 	vim.api.nvim_set_hl(0, "OilDirHidden", { link = "OilDir" })
 
