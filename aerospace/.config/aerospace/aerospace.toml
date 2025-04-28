@@ -68,7 +68,7 @@ ctrl-shift-9 = 'move-node-to-workspace 9'
 ctrl-shift-0 = 'move-node-to-workspace 10'
 
 ctrl-shift-c = 'reload-config'
-
+ctrl-z = 'reload-config'       # avoid suspending my terminal :)
 ctrl-shift-r = 'mode resize'
 
 [mode.resize.binding]
