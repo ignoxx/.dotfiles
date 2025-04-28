@@ -5,21 +5,15 @@ start-at-login = true
 # But the feature is very helpful.
 # Normalizations eliminate all sorts of weird tree configurations that don't make sense.
 # Give normalizations a chance and enable them back.
-enable-normalization-flatten-containers = false
-enable-normalization-opposite-orientation-for-nested-containers = false
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+automatically-unhide-macos-hidden-apps = true
 
 # Mouse follows focus when focused monitor changes
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 [mode.main.binding]
-# See: https://nikitabobko.github.io/AeroSpace/goodness#open-a-new-window-with-applescript
-alt-enter = '''exec-and-forget osascript -e '
-tell application "Alacritty"
-    do script
-    activate
-end tell'
-'''
-
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
@@ -86,9 +80,26 @@ enter = 'mode main'
 esc = 'mode main'
 
 [gaps]
-inner.horizontal = 6
-inner.vertical = 6
+inner.horizontal = 2
+inner.vertical = 2
 
+## FLOATING
+# [[on-window-detected]]
+# check-further-callbacks = true
+# run = 'layout floating'
+
+# Debug window from godot
+[[on-window-detected]]
+if.window-title-regex-substring = '.*[Dd]ebug.*'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Preview'
+run = 'layout floating'
 
 ## Browser space - 1
 [[on-window-detected]]
@@ -96,8 +107,14 @@ if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
+if.app-id = 'app.zen-browser.zen'
+check-further-callbacks = true
 run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+if.window-title-regex-substring = 'Picture-in-Picture'
+run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.brave.Browser'
@@ -111,11 +128,14 @@ run = 'move-node-to-workspace 1'
 if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace 1'
 
-
 ## Chat/Mail space - 2
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = ['layout floating', 'move-node-to-workspace 2']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
@@ -137,12 +157,10 @@ run = 'move-node-to-workspace 2'
 if.app-id = 'com.microsoft.Outlook'
 run = 'move-node-to-workspace 2'
 
-
 ## Music space - 3
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace 3'
-
 
 ## Notes space - 8
 [[on-window-detected]]
@@ -157,16 +175,7 @@ run = 'move-node-to-workspace 8'
 if.app-id = 'com.apple.reminders'
 run = 'move-node-to-workspace 8'
 
-
 ## DEV space - 9
-[[on-window-detected]]
-if.app-id = 'org.alacritty'
-run = 'move-node-to-workspace 9'
-
-[[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-run = 'move-node-to-workspace 9'
-
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
 run = 'move-node-to-workspace 9'
@@ -174,3 +183,17 @@ run = 'move-node-to-workspace 9'
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace 9'
+
+# Cursor
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = 'move-node-to-workspace 9'
+
+## TERMINAL space - 10
+[[on-window-detected]]
+if.app-id = 'org.alacritty'
+run = 'move-node-to-workspace 10'
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace 10'
