@@ -104,12 +104,4 @@ return {
 			})
 		end,
 	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		opts = {
-			"css",
-			"javascript",
-			"lua",
-		},
-	},
 }

@@ -4,7 +4,6 @@ return {
 		tag = "0.1.8",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			{ "nvim-telescope/telescope-live-grep-args.nvim", name = "live_grep_args", version = "^1.0.0" },
 			{ "nvim-telescope/telescope-fzf-native.nvim", name = "fzf", build = "make" },
 		},
 
@@ -38,8 +37,7 @@ return {
 			end)
 
 			vim.keymap.set("n", "<leader>ps", function()
-				-- builtin.live_grep()
-				telescope.extensions.live_grep_args.live_grep_args()
+				builtin.live_grep()
 			end)
 
 			vim.keymap.set("v", "<leader>ps", function()
@@ -53,7 +51,7 @@ return {
 				selected_text = selected_text.gsub(selected_text, "\n", " ")
 				selected_text = selected_text:gsub("^%s*(.-)%s*$", "%1")
 
-				telescope.extensions.live_grep_args.live_grep_args({
+				builtin.live_grep({
 					default_text = selected_text,
 				})
 			end)
@@ -70,7 +68,6 @@ return {
 			end)
 
 			telescope.load_extension("fzf")
-			telescope.load_extension("live_grep_args")
 		end,
 	},
 }
