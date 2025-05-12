@@ -40,6 +40,7 @@ fi
 export VISUAL=nvim
 export EDITOR=nvim
 export TERM=xterm-ghostty
+export NODE_COMPILE_CACHE=~/.cache/nodejs-compile-cache
 
 # bins
 GOBIN=$HOME/go/bin/
