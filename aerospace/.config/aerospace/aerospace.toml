@@ -170,6 +170,15 @@ run = 'move-node-to-workspace 8'
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 8'
 
+## Video editing space - 8
+[[on-window-detected]]
+if.app-id = 'com.apple.FinalCutTrial'
+run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'com.obsproject.obs-studio'
+run = 'move-node-to-workspace 7'
+
 [[on-window-detected]]
 if.app-id = 'com.apple.reminders'
 run = 'move-node-to-workspace 8'
