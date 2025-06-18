@@ -15,9 +15,9 @@ cursor-style-blink             = false
 confirm-close-surface = false
 
 # disable all ligs
-font-feature = -liga
-font-feature = -calt
-font-feature = -dlig
+# font-feature = -liga
+# font-feature = -calt
+# font-feature = -dlig
 
 font-size = 20
 font-family = "Hack Nerd Font"
