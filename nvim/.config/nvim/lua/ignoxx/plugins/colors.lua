@@ -25,6 +25,13 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "PMenu", { bg = "none", fg = "#c1c1c8" })
 	vim.api.nvim_set_hl(0, "PMenuSel", { bg = "#3c3c47" })
 	vim.api.nvim_set_hl(0, "TelescopeResultsNormal", { fg = "#646477" })
+
+	-- Diagnostics inline
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { fg = "#f28f8f", bg = "none" })
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { fg = "#f2b28e", bg = "none" })
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { fg = "#8ec1f2", bg = "none" })
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { fg = "#8ec1f2", bg = "none" })
+
 end
 
 return {

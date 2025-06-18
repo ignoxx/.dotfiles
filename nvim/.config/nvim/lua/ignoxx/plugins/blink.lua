@@ -18,28 +18,28 @@ return {
 			},
 
 			completion = {
+				list = { selection = { preselect = true, auto_insert = false } },
 				menu = { border = "rounded" },
 				documentation = { window = { border = "rounded" }, auto_show = false },
 			},
 
-			signature = { window = { border = "single" } },
+			signature = { window = { border = "rounded" } },
 
 			fuzzy = {
 				implementation = "prefer_rust_with_warning",
 				sorts = {
-					"exact",
-					-- defaults
+					-- "exact",
 					"score",
 					"sort_text",
 				},
 			},
 
-			-- freakycrazymfker
-
 			sources = {
 				-- add lazydev to your completion providers
-				default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+				default = { "lsp", "path", "snippets", "lazydev", "buffer" },
 				providers = {
+					-- defaults to `{ 'buffer' }`
+					lsp = { fallbacks = {} },
 					buffer = {
 						opts = {
 							-- get_bufnrs = vim.api.nvim_list_bufs
@@ -59,5 +59,6 @@ return {
 				},
 			},
 		},
+		opts_extend = { "sources.default" },
 	},
 }
