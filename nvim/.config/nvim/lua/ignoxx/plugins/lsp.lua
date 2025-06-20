@@ -57,8 +57,14 @@ return {
 		vim.diagnostic.config({
 			update_in_insert = true,
 			severity_sort = true,
-			float = { border = "rounded", source = "if_many", focusable = true, prefix = "", header = "", style = "minimal"},
-			underline = { severity = vim.diagnostic.severity.ERROR },
+			float = {
+				border = "rounded",
+				source = "if_many",
+				focusable = true,
+				prefix = "",
+				header = "",
+				style = "minimal",
+			},
 			signs = {
 				text = {
 					[vim.diagnostic.severity.ERROR] = "󰅚 ",

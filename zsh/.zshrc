@@ -34,8 +34,9 @@ compinit -C
 if type brew &>/dev/null
 then
   FPATH="/opt/homebrew/share/zsh/site-functions:${FPATH}"
-  source <(fzf --zsh)
 fi
+
+source <(fzf --zsh)
 
 export VISUAL=nvim
 export EDITOR=nvim
