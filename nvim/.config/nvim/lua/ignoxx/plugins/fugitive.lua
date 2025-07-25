@@ -7,6 +7,13 @@ return {
 			end
 		end)
 
+		vim.keymap.set("n", "<leader>p", function()
+			print("pulling..")
+			if not pcall(vim.cmd.Git, { "pull" }) then
+				print("not a git repo")
+			end
+		end)
+
 		local fugitive_augroup = vim.api.nvim_create_augroup("ignoxx_fugitive", {})
 
 		local autocmd = vim.api.nvim_create_autocmd

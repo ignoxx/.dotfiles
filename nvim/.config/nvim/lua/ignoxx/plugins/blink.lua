@@ -19,11 +19,20 @@ return {
 
 			completion = {
 				list = { selection = { preselect = true, auto_insert = false } },
-				menu = { border = "rounded" },
+				menu = {
+					border = "rounded",
+					draw = {
+						columns = {
+							{ "kind_icon", gap = 1 },
+							{ "label", "label_description", gap = 1 },
+						},
+					},
+				},
+
 				documentation = { window = { border = "rounded" }, auto_show = false },
 			},
 
-			signature = { window = { border = "rounded" } },
+			signature = { window = { border = "rounded" }, enabled = true },
 
 			fuzzy = {
 				implementation = "prefer_rust_with_warning",

@@ -5,7 +5,7 @@ vim.opt.bg = "dark"
 vim.opt.termguicolors = true
 
 vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
