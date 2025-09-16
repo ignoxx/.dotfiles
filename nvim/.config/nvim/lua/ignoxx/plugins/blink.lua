@@ -1,7 +1,7 @@
 return {
 	{
 		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
 		version = "1.*",
 		opts = {
 			keymap = {
@@ -12,6 +12,8 @@ return {
 					end,
 				},
 			},
+
+			snippets = { preset = "luasnip" },
 
 			appearance = {
 				nerd_font_variant = "mono",
@@ -32,7 +34,7 @@ return {
 				documentation = { window = { border = "rounded" }, auto_show = false },
 			},
 
-			signature = { window = { border = "rounded" }, enabled = true },
+			-- signature = { window = { border = "single" }, enabled=true },
 
 			fuzzy = {
 				implementation = "prefer_rust_with_warning",

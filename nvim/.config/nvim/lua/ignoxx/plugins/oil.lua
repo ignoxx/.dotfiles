@@ -1,6 +1,9 @@
 return {
 	"stevearc/oil.nvim",
+	-- Optional dependencies
+	dependencies = { { "nvim-tree/nvim-web-devicons", opts = {} } },
 	opts = {
+		default_file_explorer = true,
 		watch_for_changes = true,
 		delete_to_trash = true,
 		skip_confirm_for_simple_edits = true,
@@ -15,7 +18,7 @@ return {
 			["tt"] = "actions.toggle_trash",
 		},
 		columns = {
-			-- "icon",
+			{ "icon", add_padding = false },
 			-- "permissions",
 			-- "size",
 			-- "mtime",

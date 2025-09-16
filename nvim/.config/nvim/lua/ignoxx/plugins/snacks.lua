@@ -7,7 +7,7 @@ return {
 		image = { enabled = true },
 		quickfile = { enabled = true },
 		indent = {
-			enabled = true,
+			enabled = false,
 			animate = { enabled = false },
 		},
 	},

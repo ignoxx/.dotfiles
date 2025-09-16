@@ -87,5 +87,18 @@ return {
 				end,
 			},
 		})
+
+		-- not sure if i still need this
+		vim.diagnostic.config({
+			update_in_insert = true,
+			virtual_text = true,
+			float = {
+				style = "minimal",
+				header = "",
+				prefix = "",
+				border = "rounded",
+				focusable = true,
+			},
+		})
 	end,
 }
