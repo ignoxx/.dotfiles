@@ -39,19 +39,20 @@ return {
 			fuzzy = {
 				implementation = "prefer_rust_with_warning",
 				sorts = {
-					-- "exact",
 					"score",
 					"sort_text",
+					"exact",
 				},
 			},
 
 			sources = {
 				-- add lazydev to your completion providers
-				default = { "lsp", "path", "snippets", "lazydev", "buffer" },
+				default = { "lsp", "path", "snippets", "buffer", "lazydev" },
 				providers = {
 					-- defaults to `{ 'buffer' }`
-					lsp = { fallbacks = {} },
+					lsp = { fallbacks = {}, score_offset = 100 },
 					buffer = {
+						score_offset = 1,
 						opts = {
 							-- get_bufnrs = vim.api.nvim_list_bufs
 							get_bufnrs = function()
