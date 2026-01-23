@@ -9,7 +9,16 @@ return {
 			-- 	timeout_ms = 500,
 			-- 	lsp_fallback = true,
 			-- },
+			formatters = {
+				odinfmt = {
+					-- Change where to find the command if it isn't in your path.
+					command = "odinfmt",
+					args = { "-stdin" },
+					stdin = true,
+				},
+			},
 			formatters_by_ft = {
+				odin = { "odinfmt" },
 				templ = { "templ", "html" },
 				go = { "goimports", "gofmt" },
 				gdscript = { "gdformat" },

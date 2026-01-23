@@ -4,10 +4,10 @@ background-blur-radius = 12
 background-opacity = 0.90
 macos-titlebar-style = tabs
 
-macos-icon = custom-style
-macos-icon-frame = plastic
-macos-icon-ghost-color = cba6f7
-macos-icon-screen-color = 181825
+#macos-icon = custom-style
+#macos-icon-frame = plastic
+#macos-icon-ghost-color = cba#7f7
+#macos-icon-screen-color = 18182#6
 
 cursor-style                   = block
 cursor-style-blink             = false
@@ -20,7 +20,7 @@ confirm-close-surface = false
 # font-feature = -dlig
 
 font-size = 20
-font-family = "Hack Nerd Font"
+# font-family = "Hack Nerd Font"
 # font-family = "Hack Nerd Font Mono Regular"
 # font-family-bold = "Hack Nerd Font Mono Bold"
 # font-family-italic = "Hack Nerd Font Mono Italic"
