@@ -47,14 +47,14 @@ export NODE_COMPILE_CACHE=~/.cache/nodejs-compile-cache
 GOBIN=$HOME/go/bin/
 BUNBIN=$HOME/.bun/bin
 SSTBIN=$HOME/.sst/bin
-export PATH=$GOBIN:$BUNBIN:$SSTBIN:$PATH
-export PATH=/usr/local/bin/:$HOME/.local/bin/:$PATH
+export PATH="/usr/local/bin/:$HOME/.local/bin/:$GOBIN:$BUNBIN:$SSTBIN:$PATH"
 
 # alias
 alias vim='nvim'
 alias vi='nvim'
 alias gs='git status'
 alias gc='git checkout $(git branch | fzf)'
+alias bu='brew update && brew upgrade && brew upgrade --cask --greedy'
 
 # keybindings
 bindkey -v
@@ -92,4 +92,3 @@ bindkey '^N' history-search-forward
 if [ -f "$HOME/.env" ]; then
     source "$HOME/.env"
 fi
-
