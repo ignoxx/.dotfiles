@@ -20,22 +20,32 @@ return {
 			},
 
 			completion = {
+				-- ghost_text = { enabled = true },
 				list = { selection = { preselect = true, auto_insert = false } },
+				accept = { auto_brackets = { enabled = false } },
 				menu = {
 					border = "rounded",
 					draw = {
+						treesitter = { "lsp" },
 						columns = {
 							{ "kind_icon", gap = 1 },
 							{ "label", "label_description", gap = 1 },
+							{ "kind", "source_name", gap = 1 },
 						},
 					},
 				},
 
-				documentation = { window = { border = "rounded" }, auto_show = false },
+				documentation = {
+					window = { border = "rounded" },
+					auto_show = true,
+					auto_show_delay_ms = 0,
+				},
 			},
 
-			-- signature = { window = { border = "single" }, enabled=true },
-
+			signature = {
+				enabled = true,
+				window = { border = "single", show_documentation = false },
+			},
 			fuzzy = {
 				implementation = "prefer_rust_with_warning",
 				sorts = {
