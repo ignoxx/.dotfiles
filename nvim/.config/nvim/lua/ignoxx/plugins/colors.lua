@@ -32,6 +32,7 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { fg = "#8ec1f2", bg = "none" })
 	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { fg = "#8ec1f2", bg = "none" })
 
+	vim.api.nvim_set_hl(0, "LineNr", { fg = "#666068", bg = "none" })
 end
 
 return {

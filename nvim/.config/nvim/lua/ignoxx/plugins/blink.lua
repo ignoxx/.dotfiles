@@ -20,7 +20,6 @@ return {
 			},
 
 			completion = {
-				-- ghost_text = { enabled = true },
 				list = { selection = { preselect = true, auto_insert = false } },
 				accept = { auto_brackets = { enabled = false } },
 				menu = {
@@ -56,8 +55,10 @@ return {
 			},
 
 			sources = {
-				-- add lazydev to your completion providers
 				default = { "lsp", "path", "snippets", "buffer", "lazydev" },
+				per_filetype = {
+					sql = { "snippets", "dadbod", "buffer" },
+				},
 				providers = {
 					-- defaults to `{ 'buffer' }`
 					lsp = { fallbacks = {}, score_offset = 100 },
@@ -77,6 +78,11 @@ return {
 						module = "lazydev.integrations.blink",
 						-- make lazydev completions top priority (see `:h blink.cmp`)
 						score_offset = 100,
+					},
+					dadbod = {
+						name = "Dadbod",
+						module = "vim_dadbod_completion.blink",
+						min_keyword_length = 0,
 					},
 				},
 			},
