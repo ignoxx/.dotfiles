@@ -1,4 +1,23 @@
-PROMPT='%(?:%{[01;32m%}%1{➜%} :%{[01;31m%}%1{➜%} ) %{[36m%}%c%{[00m%} '
+setopt PROMPT_SUBST
+
+git_branch() {
+  local branch
+  branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) || return
+  
+  local color
+  case $branch in
+    prod|prd|production|main|master) color="%F{red}" ;;
+    *) color="%F{yellow}" ;;
+  esac
+  
+  echo " %F{white}(%F{reset}$color$branch%F{white})%F{reset}"
+}
+
+precmd() {
+  BRANCH_PROMPT=$(git_branch)
+}
+
+PS1='%(?:%{%F{green}%}%1{➜%} :%{%F{red}%}%1{➜%} ) %{%F{cyan}%}%c%{%f%}${BRANCH_PROMPT} '
 
 HISTSIZE=10000
 SAVEHIST=10000
