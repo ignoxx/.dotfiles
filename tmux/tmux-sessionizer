@@ -21,7 +21,7 @@ if [[ -z $selected ]]; then
 fi
 
 selected_name=$(basename "$selected" | tr . _)
-selected_name=${selected_name:0:7}
+selected_name=${selected_name:0:20}
 
 tmux_running=$(pgrep tmux)
 
