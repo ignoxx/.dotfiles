@@ -3,13 +3,13 @@ setopt PROMPT_SUBST
 git_branch() {
   local branch
   branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) || return
-  
+
   local color
   case $branch in
     prod|prd|production|main|master) color="%F{red}" ;;
     *) color="%F{yellow}" ;;
   esac
-  
+
   echo " %F{white}(%F{reset}$color$branch%F{white})%F{reset}"
 }
 
@@ -63,10 +63,11 @@ export TERM=xterm-ghostty
 export NODE_COMPILE_CACHE=~/.cache/nodejs-compile-cache
 
 # bins
+GOPATH=$HOME/go
 GOBIN=$HOME/go/bin/
 BUNBIN=$HOME/.bun/bin
 SSTBIN=$HOME/.sst/bin
-export PATH="/usr/local/bin/:$HOME/.local/bin/:$GOBIN:$BUNBIN:$SSTBIN:$PATH"
+export PATH="/usr/local/bin/:$HOME/.local/bin/:$GOBIN:$GOPATH/bin:$BUNBIN:$SSTBIN:$PATH"
 
 # alias
 alias vim='nvim'
