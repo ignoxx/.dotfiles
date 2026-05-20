@@ -1,0 +1,10 @@
+{
+  "app.session.toggleSort": [],
+  "app.session.togglePath": [],
+  "app.session.toggleNamedFilter": [],
+  "app.models.save": [],
+  "tui.select.up": ["up", "ctrl+p"],
+  "tui.select.down": ["down", "ctrl+n"],
+  "tui.select.pageUp": ["pageUp"],
+  "tui.select.pageDown": ["pageDown"]
+}
