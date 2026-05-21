@@ -1,9 +1,0 @@
-{
-  "name": "pi-extensions",
-  "private": true,
-  "dependencies": {
-    "@aliou/pi-guardrails": "^0.12.1",
-    "@juicesharp/rpiv-todo": "^1.10.2",
-    "pi-caveman": "^1.0.7"
-  }
-}
