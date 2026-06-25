@@ -1,14 +1,23 @@
 {
-  "lastChangelogVersion": "0.79.3",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "high",
-  "hideThinkingBlock": false,
   "collapseChangelog": true,
+  "defaultModel": "glm-5.2",
+  "defaultProvider": "opencode-go",
+  "defaultThinkingLevel": "high",
   "enableInstallTelemetry": false,
-  "theme": "dark",
-  "packages": [],
+  "hideThinkingBlock": false,
+  "lastChangelogVersion": "0.80.2",
+  "packages": [
+    "npm:pi-hermes-memory",
+    "npm:@aliou/pi-guardrails",
+    "npm:@juicesharp/rpiv-todo"
+  ],
   "terminal": {
     "showTerminalProgress": true
-  }
+  },
+  "theme": "roseprime",
+  "quietStartup": false,
+  "transport": "auto",
+  "defaultProjectTrust": "always",
+  "doubleEscapeAction": "tree",
+  "treeFilterMode": "default"
 }

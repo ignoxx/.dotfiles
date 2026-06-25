@@ -1,0 +1,9 @@
+{
+  "name": "pi-extensions",
+  "private": true,
+  "dependencies": {
+    "@aliou/pi-guardrails": "^0.14.0",
+    "@juicesharp/rpiv-todo": "^1.20.0",
+    "pi-hermes-memory": "^0.7.17"
+  }
+}

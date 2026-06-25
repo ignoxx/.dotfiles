@@ -33,7 +33,6 @@ export default function localCaveman(pi: ExtensionAPI) {
         if (next && levels.includes(next)) level = next;
       }
     }
-    ctx.ui.setStatus("caveman", level === "off" ? "" : `🔥 caveman ${level}`);
   });
 
   pi.registerCommand("caveman", {
