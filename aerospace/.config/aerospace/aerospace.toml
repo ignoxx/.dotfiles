@@ -201,6 +201,10 @@ if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
+if.app-id = 'com.openai.codex'
+run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
 if.app-id = 'com.yoyogames.gms2'
 run = 'move-node-to-workspace 9'
 

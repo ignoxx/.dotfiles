@@ -48,7 +48,7 @@ export default function (pi: ExtensionAPI) {
 
 			ctx.ui.setStatus(
 				"tps",
-				ctx.ui.theme.fg("success", `⚡ ${tps} tok/s`) +
+				ctx.ui.theme.fg("success", `${tps} tok/s`) +
 				ctx.ui.theme.fg("dim", ` (${outputTokens} tokens in ${elapsed.toFixed(1)}s)`),
 			);
 		} else {

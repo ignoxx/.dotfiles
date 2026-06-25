@@ -61,6 +61,7 @@ export VISUAL=nvim
 export EDITOR=nvim
 export TERM=xterm-ghostty
 export NODE_COMPILE_CACHE=~/.cache/nodejs-compile-cache
+export PI_SKIP_VERSION_CHECK=1
 
 # bins
 GOPATH=$HOME/go
