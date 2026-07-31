@@ -1,0 +1,52 @@
+onboarding = false
+
+[ui]
+agent_panel_sort = "priority"
+prompt_new_tab_name = false
+
+show_agent_labels_on_pane_borders = false
+[keys]
+# Keep tmux muscle memory. Herdr defaults remain as aliases where useful.
+prefix = "ctrl+b"
+detach = "prefix+d"
+new_tab = "prefix+c"
+previous_tab = ["prefix+p", "prefix+l"]
+next_tab = "prefix+n"
+switch_tab = "prefix+1..9"
+rename_tab = "prefix+comma"
+close_tab = "prefix+ampersand"
+copy_mode = "prefix+["
+zoom = "prefix+z"
+close_pane = "prefix+x"
+last_pane = "prefix+semicolon"
+cycle_pane_next = "prefix+o"
+previous_workspace = "prefix+shift+l"
+split_vertical = ["prefix+percent", "prefix+v"]
+split_horizontal = ["prefix+double_quote", "prefix+minus"]
+focus_pane_left = "prefix+left"
+focus_pane_down = "prefix+down"
+focus_pane_up = "prefix+up"
+focus_pane_right = "prefix+right"
+workspace_picker = ["prefix+s", "prefix+w"]
+reload_config = "prefix+r"
+resize_mode = "prefix+shift+r"
+settings = ""
+
+# Direct Ctrl-S opens locally vendored herdr-sessionizer.
+[[keys.command]]
+key = "ctrl+s"
+type = "popup"
+command = "$HOME/.config/herdr/plugins/local/sessionizer/run"
+description = "Open project workspace"
+width = "90%"
+height = "85%"
+
+[theme]
+name = "rose-pine"
+auto_switch = false
+
+[ui.sound]
+enabled = false
+
+[ui.toast]
+delivery = "herdr"

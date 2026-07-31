@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+plugin_dir="${HOME}/.config/herdr/plugins/local/sessionizer"
+cd "$plugin_dir"
+
+if [[ ! -d node_modules/smol-toml ]]; then
+    bun install --production --frozen-lockfile --ignore-scripts
+fi
+
+exec bun run src/sessionizer/sessionizer-pane.ts

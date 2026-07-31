@@ -1,15 +1,18 @@
 {
   "collapseChangelog": true,
-  "defaultModel": "glm-5.2",
+  "defaultModel": "deepseek-v4-flash",
   "defaultProvider": "opencode-go",
   "defaultThinkingLevel": "high",
   "enableInstallTelemetry": false,
   "hideThinkingBlock": false,
-  "lastChangelogVersion": "0.80.2",
+  "lastChangelogVersion": "0.80.10",
   "packages": [
     "npm:pi-hermes-memory",
-    "npm:@aliou/pi-guardrails",
-    "npm:@juicesharp/rpiv-todo"
+    "./packages/pi-guardrails",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:pi-lmstudio",
+    "npm:@plannotator/pi-extension",
+    "npm:@tintinweb/pi-subagents"
   ],
   "terminal": {
     "showTerminalProgress": true

@@ -5,7 +5,7 @@ My config files managed with `stow`
 
 # requirements
 ```sh
-brew install stow gh
+brew install stow gh herdr bun fzf
 ```
 
 # setup
@@ -13,7 +13,7 @@ brew install stow gh
 - clone this repo to `~`
 
 ```
-stow tmux nvim ..
+stow tmux nvim herdr ..
 ```
 
 ```

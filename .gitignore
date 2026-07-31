@@ -1,6 +1,7 @@
 # Pi
 pi/.pi/agent/npm/node_modules/
 pi/.pi/agent/extensions/pi-skill-toggle/node_modules/
+node_modules
 
 # macOS
 .DS_Store

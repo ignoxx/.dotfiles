@@ -1,0 +1,24 @@
+[projects]
+roots = [
+  "~",
+  "~/Projects",
+  "~/Projects/DarkInSpace",
+  "~/Projects/sl3",
+  "~/.config",
+  "~/Projects/teachme",
+]
+git_only = false
+depth = 1
+
+[layout]
+placement = "overlay"
+focus = "shell"
+
+# Match tmux-sessionizer: new project opens one normal shell at project root.
+[tabs.shell]
+label = "shell"
+
+[[tabs.shell.panes]]
+id = "shell"
+title = ""
+command = ""
