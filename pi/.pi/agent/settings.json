@@ -1,13 +1,12 @@
 {
   "collapseChangelog": true,
-  "defaultModel": "deepseek-v4-flash",
-  "defaultProvider": "opencode-go",
-  "defaultThinkingLevel": "high",
+  "defaultModel": "gpt-5.6-luna",
+  "defaultProvider": "openai-codex",
+  "defaultThinkingLevel": "off",
   "enableInstallTelemetry": false,
   "hideThinkingBlock": false,
-  "lastChangelogVersion": "0.80.10",
+  "lastChangelogVersion": "0.99.1",
   "packages": [
-    "npm:pi-hermes-memory",
     "./packages/pi-guardrails",
     "npm:@juicesharp/rpiv-todo",
     "npm:pi-lmstudio",
