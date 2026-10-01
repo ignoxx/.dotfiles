@@ -25,15 +25,14 @@ export default function (pi: ExtensionAPI) {
 		ctx.ui.setStatus("tps", undefined);
 	});
 
-	pi.on("turn_start", (_event, ctx) => {
+	pi.on("turn_start", () => {
 		reset();
-		ctx.ui.setStatus("tps", undefined);
 	});
 
-	pi.on("message_start", (event, ctx) => {
+	pi.on("message_start", (event) => {
 		if (event.message.role !== "assistant") return;
+		// Keep previous throughput visible until a new live estimate replaces it.
 		reset();
-		ctx.ui.setStatus("tps", undefined);
 	});
 
 	pi.on("message_update", (event, ctx) => {

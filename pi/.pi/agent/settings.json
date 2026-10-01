@@ -8,10 +8,7 @@
   "lastChangelogVersion": "0.99.1",
   "packages": [
     "./packages/pi-guardrails",
-    "npm:@juicesharp/rpiv-todo",
-    "npm:pi-lmstudio",
-    "npm:@plannotator/pi-extension",
-    "npm:@tintinweb/pi-subagents"
+    "npm:@juicesharp/rpiv-todo"
   ],
   "terminal": {
     "showTerminalProgress": true
