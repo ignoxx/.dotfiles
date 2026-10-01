@@ -3,6 +3,7 @@
   "app.session.togglePath": [],
   "app.session.toggleNamedFilter": [],
   "app.models.save": [],
+  "app.thinking.save": ["ctrl+alt+s"],
   "tui.select.up": ["up", "ctrl+p"],
   "tui.select.down": ["down", "ctrl+n"],
   "tui.select.pageUp": ["pageUp"],
